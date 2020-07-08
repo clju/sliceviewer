@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <AutoCompleteTextView
+      android:id="@+id/authorityTextView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Authority"/>
+
+  <EditText
+      android:id="@+id/pathTextView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Path"/>
+
+  <RadioGroup
+      android:id="@+id/sliceMode"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/sliceModeLarge"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Large"/>
+
+    <RadioButton
+        android:id="@+id/sliceModeSmall"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Small"/>
+
+    <RadioButton
+        android:id="@+id/sliceModeShortcut"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Shortcut"/>
+  </RadioGroup>
+
+  <androidx.slice.widget.SliceView
+      android:id="@+id/sliceView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"/>
+
+</LinearLayout>
