@@ -2,7 +2,7 @@
 
 See android doc about [Slices](https://developer.android.com/guide/slices).
 
-##Features
+## Features
 
 * minimal code
 * simple UI
@@ -10,7 +10,7 @@ See android doc about [Slices](https://developer.android.com/guide/slices).
 * auto-completes authority names
 
 
-##Usage
+## Usage
 
 1. Specify Slice URI
   * enter slice authority in `Authority` text field (should be auto-completed).
