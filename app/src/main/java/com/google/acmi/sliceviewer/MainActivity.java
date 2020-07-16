@@ -1,3 +1,19 @@
+/*
+ * Copyright (C) 2020 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package com.google.acmi.sliceviewer;
 
 import android.app.Activity;
@@ -25,6 +41,14 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * This app lets users view the slices that are installed on the system.
+ *
+ * <p>In a very simple UI, users can specify slice authority (auto-completed based on the available
+ * ContentProviders) and slice path, as well as toggle between three slice display mode (large,
+ * small and shortcut). Below these input fields, the slice will be inflated and continuously
+ * updated.</p>
+ */
 public class MainActivity extends Activity {
   private static final String TAG = "sliceviewer";
 
@@ -70,11 +94,12 @@ public class MainActivity extends Activity {
     RadioButton radioButtonSmall = findViewById(R.id.sliceModeSmall);
     RadioButton radioButtonShortcut = findViewById(R.id.sliceModeShortcut);
 
-    // Set listeners on text views.
+    // Set listeners on text views. Since we simply want to trigger actions when the text is
+    // changed, we only care about the onTextChanged callback.
     autoCompleteTextView.addTextChangedListener(new TextWatcher() {
       @Override
       public void beforeTextChanged(CharSequence s, int start, int before, int count) {
-
+        // Nothing to do.
       }
 
       @Override
@@ -85,14 +110,14 @@ public class MainActivity extends Activity {
 
       @Override
       public void afterTextChanged(Editable s) {
-
+        // Nothing to do.
       }
     });
 
     pathTextView.addTextChangedListener(new TextWatcher() {
       @Override
       public void beforeTextChanged(CharSequence s, int start, int before, int count) {
-
+        // Nothing to do.
       }
 
       @Override
@@ -103,7 +128,7 @@ public class MainActivity extends Activity {
 
       @Override
       public void afterTextChanged(Editable s) {
-
+        // Nothing to do.
       }
     });
 
